@@ -18,6 +18,9 @@ class App extends Component {
                   return(
                      <CircleMarker
                      center={[city["coordinates"][1], city["coordinates"][0]]}
+                     radius={20 * Math.log(city["population"] / 10000000)}
+                     fillOpacity = {0.5}
+                     stroke={false}
                      />
                   )
               })}
